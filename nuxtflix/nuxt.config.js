@@ -1,5 +1,6 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+  ssr: false,
   head: {
     title: 'nuxtflix',
     meta: [
@@ -45,6 +46,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
+    '@nuxtjs/auth-next',
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
@@ -63,6 +65,35 @@ export default {
     },
   },
 
+  auth: {
+    strategies: {
+      local: {
+        endpoints: {
+          login: {
+            url: (process.env.BASE_URL + "/api/login/"),
+            method: "post",
+            propertyName: "auth_token",
+          },
+          logout: {
+            url: (process.env.BASE_URL + "/api/logout/"),
+            method: "post",
+            propertyName: "auth_token",
+          },
+          user: {
+            url: (process.env.BASE_URL + "/user/"),
+            method: "get",
+            propertyName: false,
+          },
+        },
+        tokenType: "Token",
+        tokenName: "Authorization",
+      },
+    },
+    redirect: {
+      login: "/",
+      home: "/movies",
+    },
+  },
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
 

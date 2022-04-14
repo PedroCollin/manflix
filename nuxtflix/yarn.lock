@@ -1827,7 +1827,36 @@
     "webpack-node-externals" "^3.0.0"
     "webpackbar" "^4.0.0"
 
-"@nuxtjs/axios@^5.13.6":
+"@nuxtjs/auth-next@5.0.0-1648802546.c9880dc":
+  "integrity" "sha1-/gHkTJzLz6h2oZEE4Ml39CrGm+M="
+  "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/@nuxtjs/auth-next/-/auth-next-5.0.0-1648802546.c9880dc.tgz"
+  "version" "5.0.0-1648802546.c9880dc"
+  dependencies:
+    "@nuxtjs/axios" "^5.13.6"
+    "axios" "^0.26.1"
+    "body-parser" "^1.19.2"
+    "consola" "^2.15.3"
+    "cookie" "^0.4.2"
+    "defu" "^5.0.1"
+    "hasha" "^5.2.2"
+    "jwt-decode" "^3.1.2"
+    "requrl" "^3.0.2"
+
+"@nuxtjs/auth@^4.9.1":
+  "integrity" "sha1-iCfk0jv5AXEUI0NK1KcHOo/FFgM="
+  "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/@nuxtjs/auth/-/auth-4.9.1.tgz"
+  "version" "4.9.1"
+  dependencies:
+    "@nuxtjs/axios" "^5.9.5"
+    "body-parser" "^1.19.0"
+    "consola" "^2.11.3"
+    "cookie" "^0.4.0"
+    "is-https" "^1.0.0"
+    "js-cookie" "^2.2.1"
+    "lodash" "^4.17.15"
+    "nanoid" "^2.1.11"
+
+"@nuxtjs/axios@^5.13.6", "@nuxtjs/axios@^5.9.5":
   "integrity" "sha1-b0u9mKOneZpdLAcmxq0qmKoRGIE="
   "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/@nuxtjs/axios/-/axios-5.13.6.tgz"
   "version" "5.13.6"
@@ -3110,6 +3139,13 @@
   dependencies:
     "follow-redirects" "^1.14.0"
 
+"axios@^0.26.1":
+  "integrity" "sha1-Ht5BxR/PUbu9b9Q2acqqTwSVqqk="
+  "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/axios/-/axios-0.26.1.tgz"
+  "version" "0.26.1"
+  dependencies:
+    "follow-redirects" "^1.14.8"
+
 "babel-code-frame@^6.26.0":
   "integrity" "sha1-Y/1D99weO7fONZR9uP42mj9Yx0s="
   "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/babel-code-frame/-/babel-code-frame-6.26.0.tgz"
@@ -3380,6 +3416,24 @@
   "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/bn.js/-/bn.js-5.2.0.tgz"
   "version" "5.2.0"
 
+"body-parser@^1.19.0", "body-parser@^1.19.2":
+  "integrity" "sha1-Peab2JARwRVz17/uamTxG2vSfMU="
+  "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/body-parser/-/body-parser-1.20.0.tgz"
+  "version" "1.20.0"
+  dependencies:
+    "bytes" "3.1.2"
+    "content-type" "~1.0.4"
+    "debug" "2.6.9"
+    "depd" "2.0.0"
+    "destroy" "1.2.0"
+    "http-errors" "2.0.0"
+    "iconv-lite" "0.4.24"
+    "on-finished" "2.4.1"
+    "qs" "6.10.3"
+    "raw-body" "2.5.1"
+    "type-is" "~1.6.18"
+    "unpipe" "1.0.0"
+
 "boolbase@^1.0.0", "boolbase@~1.0.0":
   "integrity" "sha1-aN/1++YMUes3cl6p4+0xDcwed24="
   "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/boolbase/-/boolbase-1.0.0.tgz"
@@ -3572,6 +3626,11 @@
   "integrity" "sha1-0ygVQE1olpn4Wk6k+odV3ROpYEg="
   "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/bytes/-/bytes-3.0.0.tgz"
   "version" "3.0.0"
+
+"bytes@3.1.2":
+  "integrity" "sha1-iwvuuYYFrfGxKPpDhkA8AJ4CIaU="
+  "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/bytes/-/bytes-3.1.2.tgz"
+  "version" "3.1.2"
 
 "cacache@^12.0.2":
   "integrity" "sha1-ZovL0QWutfHZL+JVcOyVJcj6pAw="
@@ -4264,7 +4323,7 @@
     "parseurl" "~1.3.3"
     "utils-merge" "1.0.1"
 
-"consola@*", "consola@^2.10.0", "consola@^2.15.0", "consola@^2.15.3", "consola@^2.6.0", "consola@^2.9.0":
+"consola@*", "consola@^2.10.0", "consola@^2.11.3", "consola@^2.15.0", "consola@^2.15.3", "consola@^2.6.0", "consola@^2.9.0":
   "integrity" "sha1-LhH5jWpL5x/3LgvfB70j4Sy2FVA="
   "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/consola/-/consola-2.15.3.tgz"
   "version" "2.15.3"
@@ -4302,7 +4361,7 @@
   dependencies:
     "safe-buffer" "5.2.1"
 
-"content-type@^1.0.4":
+"content-type@^1.0.4", "content-type@~1.0.4":
   "integrity" "sha1-4TjMdeBAxyexlm/l5fjJruJW/js="
   "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/content-type/-/content-type-1.0.4.tgz"
   "version" "1.0.4"
@@ -4347,6 +4406,16 @@
   "integrity" "sha1-5+Ch+e9DtMi6klxcWpboBtFoc7s="
   "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/cookie/-/cookie-0.3.1.tgz"
   "version" "0.3.1"
+
+"cookie@^0.4.0":
+  "integrity" "sha1-DkHyTeXs8xeUfIL8eJ4GqISCRDI="
+  "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/cookie/-/cookie-0.4.2.tgz"
+  "version" "0.4.2"
+
+"cookie@^0.4.2":
+  "integrity" "sha1-DkHyTeXs8xeUfIL8eJ4GqISCRDI="
+  "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/cookie/-/cookie-0.4.2.tgz"
+  "version" "0.4.2"
 
 "cookies@~0.8.0":
   "integrity" "sha1-EpPOSzkXQKhAbjyYcOgoxLVPP5A="
@@ -4957,6 +5026,11 @@
   "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/defu/-/defu-5.0.1.tgz"
   "version" "5.0.1"
 
+"defu@^5.0.1":
+  "integrity" "sha1-oDQnj5sDK/CEXSYap16a2Y2oeKw="
+  "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/defu/-/defu-5.0.1.tgz"
+  "version" "5.0.1"
+
 "delayed-stream@~1.0.0":
   "integrity" "sha1-3zrhmayt+31ECqrgsp4icrJOxhk="
   "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/delayed-stream/-/delayed-stream-1.0.0.tgz"
@@ -4982,6 +5056,11 @@
   "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/depd/-/depd-2.0.0.tgz"
   "version" "2.0.0"
 
+"depd@2.0.0":
+  "integrity" "sha1-tpYWPMdXVg0JzyLMj60Vcbeedt8="
+  "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/depd/-/depd-2.0.0.tgz"
+  "version" "2.0.0"
+
 "des.js@^1.0.0":
   "integrity" "sha1-U4IULhvcU/hdhtU+X0qn3rkeCEM="
   "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/des.js/-/des.js-1.0.1.tgz"
@@ -4995,10 +5074,10 @@
   "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/destr/-/destr-1.1.0.tgz"
   "version" "1.1.0"
 
-"destroy@^1.0.4":
-  "integrity" "sha1-t3riLkcthUNxQTGdMq5As0Tf84o="
-  "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/destroy/-/destroy-1.1.0.tgz"
-  "version" "1.1.0"
+"destroy@^1.0.4", "destroy@1.2.0":
+  "integrity" "sha1-SANzVQmti+VSk0xn32FPlOZvoBU="
+  "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/destroy/-/destroy-1.2.0.tgz"
+  "version" "1.2.0"
 
 "destroy@~1.0.4":
   "integrity" "sha1-l4hXRCxEdJ5CBmE+N5RiBYJqvYA="
@@ -6091,10 +6170,10 @@
     "inherits" "^2.0.3"
     "readable-stream" "^2.3.6"
 
-"follow-redirects@^1.0.0", "follow-redirects@^1.14.0":
-  "integrity" "sha1-IATALrlDbu6aIURqZHfevxfoFoU="
-  "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/follow-redirects/-/follow-redirects-1.14.7.tgz"
-  "version" "1.14.7"
+"follow-redirects@^1.0.0", "follow-redirects@^1.14.0", "follow-redirects@^1.14.8":
+  "integrity" "sha1-3U6hV957+vnqmz+9haoWlR942Nc="
+  "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/follow-redirects/-/follow-redirects-1.14.9.tgz"
+  "version" "1.14.9"
 
 "for-in@^1.0.2":
   "integrity" "sha1-gQaNKVqBQuwKxybG4iAMMPttXoA="
@@ -6880,6 +6959,17 @@
     "setprototypeof" "1.1.0"
     "statuses" ">= 1.4.0 < 2"
 
+"http-errors@2.0.0":
+  "integrity" "sha1-t3dKFIbvc892Z6ya4IWMASxXudM="
+  "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/http-errors/-/http-errors-2.0.0.tgz"
+  "version" "2.0.0"
+  dependencies:
+    "depd" "2.0.0"
+    "inherits" "2.0.4"
+    "setprototypeof" "1.2.0"
+    "statuses" "2.0.1"
+    "toidentifier" "1.0.1"
+
 "http-proxy-agent@^4.0.1":
   "integrity" "sha1-ioyO9/WTLM+VPClsqCkblap0qjo="
   "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/http-proxy-agent/-/http-proxy-agent-4.0.1.tgz"
@@ -7357,6 +7447,11 @@
   "integrity" "sha1-zDXJdYjaS9Saju3WvECC1E3LI6c="
   "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/is-hexadecimal/-/is-hexadecimal-1.0.4.tgz"
   "version" "1.0.4"
+
+"is-https@^1.0.0":
+  "integrity" "sha1-nB3eAA3H5yiO25g77zeeSY58sb8="
+  "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/is-https/-/is-https-1.0.0.tgz"
+  "version" "1.0.0"
 
 "is-negative-zero@^2.0.1":
   "integrity" "sha1-e/bwOigAO4s5Zd46wm9mTXZfMVA="
@@ -8019,6 +8114,11 @@
     "glob" "^7.1.3"
     "nopt" "^5.0.0"
 
+"js-cookie@^2.2.1":
+  "integrity" "sha1-aeEG3F1YBolFYpAqpbrsN0Tpsrg="
+  "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/js-cookie/-/js-cookie-2.2.1.tgz"
+  "version" "2.2.1"
+
 "js-tokens@^3.0.0 || ^4.0.0", "js-tokens@^4.0.0":
   "integrity" "sha1-GSA/tZmR35jjoocFDUZHzerzJJk="
   "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/js-tokens/-/js-tokens-4.0.0.tgz"
@@ -8164,6 +8264,11 @@
   dependencies:
     "jsonparse" "^1.2.0"
     "through" ">=2.2.7 <3"
+
+"jwt-decode@^3.1.2":
+  "integrity" "sha1-P7MZ82daLfDCiVyPXp+ktnsE7Vk="
+  "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/jwt-decode/-/jwt-decode-3.1.2.tgz"
+  "version" "3.1.2"
 
 "keygrip@~1.1.0":
   "integrity" "sha1-hxsWgdXhWcYqRFsMdLYV4JF+ciY="
@@ -9212,6 +9317,11 @@
   "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/mute-stream/-/mute-stream-0.0.8.tgz"
   "version" "0.0.8"
 
+"nanoid@^2.1.11":
+  "integrity" "sha1-7CS4p1jVkVYVMbQXagHjq08PAoA="
+  "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/nanoid/-/nanoid-2.1.11.tgz"
+  "version" "2.1.11"
+
 "nanoid@^3.1.23", "nanoid@^3.2.0":
   "integrity" "sha1-YmZ1Itpmc5ccypFqbT7/P0Ff+Aw="
   "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/nanoid/-/nanoid-3.2.0.tgz"
@@ -9586,6 +9696,13 @@
   "integrity" "sha1-IPEzZIGwg811M3mSoWlxqi2QaUc="
   "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/on-finished/-/on-finished-2.3.0.tgz"
   "version" "2.3.0"
+  dependencies:
+    "ee-first" "1.1.1"
+
+"on-finished@2.4.1":
+  "integrity" "sha1-WMjEQRblSEWtV/FKsQsDUzGErD8="
+  "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/on-finished/-/on-finished-2.4.1.tgz"
+  "version" "2.4.1"
   dependencies:
     "ee-first" "1.1.1"
 
@@ -11092,7 +11209,7 @@
   "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/q/-/q-1.5.1.tgz"
   "version" "1.5.1"
 
-"qs@^6.5.2", "qs@^6.9.4":
+"qs@^6.5.2", "qs@^6.9.4", "qs@6.10.3":
   "integrity" "sha1-1s3hsv/Kh7WqV4iYFsX4FTXiLo4="
   "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/qs/-/qs-6.10.3.tgz"
   "version" "6.10.3"
@@ -11161,6 +11278,16 @@
   "integrity" "sha1-PPNwI9GZ4cJNGlW4SADC8+ZGgDE="
   "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/range-parser/-/range-parser-1.2.1.tgz"
   "version" "1.2.1"
+
+"raw-body@2.5.1":
+  "integrity" "sha1-/hsWKLGBtwAhXl/UI4n5i3E5KFc="
+  "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/raw-body/-/raw-body-2.5.1.tgz"
+  "version" "2.5.1"
+  dependencies:
+    "bytes" "3.1.2"
+    "http-errors" "2.0.0"
+    "iconv-lite" "0.4.24"
+    "unpipe" "1.0.0"
 
 "rc9@^1.2.0":
   "integrity" "sha1-7wmBgf3ecU78TEJjg9bkbBSxJUo="
@@ -11499,6 +11626,11 @@
   "integrity" "sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8="
   "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/requires-port/-/requires-port-1.0.0.tgz"
   "version" "1.0.0"
+
+"requrl@^3.0.2":
+  "integrity" "sha1-03YQQZOwKi2HTd5oRUwtst/rD6w="
+  "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/requrl/-/requrl-3.0.2.tgz"
+  "version" "3.0.2"
 
 "resolve-cwd@^3.0.0":
   "integrity" "sha1-DwB18bslRHZs9zumpuKt/ryxPy0="
@@ -12349,6 +12481,11 @@
   "integrity" "sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow="
   "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/statuses/-/statuses-1.5.0.tgz"
   "version" "1.5.0"
+
+"statuses@2.0.1":
+  "integrity" "sha1-VcsADM8dSHKL0jxoWgY5mM8aG2M="
+  "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/statuses/-/statuses-2.0.1.tgz"
+  "version" "2.0.1"
 
 "std-env@^2.2.1", "std-env@^2.3.0":
   "integrity" "sha1-1CJxkIgZwkP43vx3oUD8H87jNqE="
@@ -13204,7 +13341,7 @@
   "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/type-fest/-/type-fest-0.8.1.tgz"
   "version" "0.8.1"
 
-"type-is@^1.6.16":
+"type-is@^1.6.16", "type-is@~1.6.18":
   "integrity" "sha1-TlUs0F3wlGfcvE73Od6J8s83wTE="
   "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/type-is/-/type-is-1.6.18.tgz"
   "version" "1.6.18"
@@ -13404,7 +13541,7 @@
   "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/universalify/-/universalify-2.0.0.tgz"
   "version" "2.0.0"
 
-"unpipe@~1.0.0":
+"unpipe@~1.0.0", "unpipe@1.0.0":
   "integrity" "sha1-sr9O6FFKrmFltIF4KdIbLvSZBOw="
   "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/unpipe/-/unpipe-1.0.0.tgz"
   "version" "1.0.0"
@@ -13699,7 +13836,7 @@
   "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz"
   "version" "1.9.1"
 
-"vue@^2.0.0", "vue@^2.5.17", "vue@^2.6.12", "vue@^2.6.14", "vue@^2.x", "vue@>= 2.5 < 3", "vue@2.x":
+"vue@*", "vue@^2.0.0", "vue@^2.5.17", "vue@^2.6.12", "vue@^2.6.14", "vue@^2.x", "vue@>= 2.5 < 3", "vue@2.x":
   "integrity" "sha1-5RqlJQJQ1Wmj+606ilpofWA24jU="
   "resolved" "https://rb-artifactory.bosch.com:443/artifactory/api/npm/npm-repo/vue/-/vue-2.6.14.tgz"
   "version" "2.6.14"

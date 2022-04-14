@@ -5,39 +5,37 @@
       <div class="hero-section__welcome z-10 border-b-8 border-gray-800">
         <div>
           <div class="container">
-            <div class="forms">
-              <div class="form login">
-                <div class="title-container">
-                  <span id="sig" class="title">Sign in</span>
-                  <div class="imgbosch"></div>
-                </div>
-                <form @submit.prevent="enviarLogin">
-                  <div class="input-field">
-                    <input
-                      type="text"
-                      placeholder="Entre com seu e-mail"
-                      v-model="email"
-                      required
-                    />
-                    <i class="uil uil-envelope icon"></i>
-                  </div>
-                  <div class="input-field">
-                    <input
-                      type="password"
-                      class="password"
-                      placeholder="Entre com sua senha"
-                      v-model="senha"
-                      required
-                    />
-                    <i class="uil uil-lock icon"></i>
-                    <i class="uil uil-eye-slash showHidePw"></i>
-                  </div>
-
-                  <div class="input-field button">
-                    <input type="submit" value="Sign in" />
-                  </div>
-                </form>
+            <div class="form login">
+              <div class="title-container">
+                <span id="sig" class="title">Sign in</span>
+                <div class="imgbosch"></div>
               </div>
+              <form @submit.prevent="sendlogin">
+                <div class="input-field">
+                  <input
+                    type="text"
+                    placeholder="Entre com seu e-mail"
+                    v-model="login.username"
+                    required
+                  />
+                  <i class="uil uil-envelope icon"></i>
+                </div>
+                <div class="input-field">
+                  <input
+                    type="password"
+                    class="password"
+                    placeholder="Entre com sua senha"
+                    v-model="login.password"
+                    required
+                  />
+                  <i class="uil uil-lock icon"></i>
+                  <i class="uil uil-eye-slash showHidePw"></i>
+                </div>
+
+                <div class="input-field button">
+                  <input type="submit" value="Sign in" />
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -62,69 +60,61 @@
 
 <script lang="ts">
 import { defineComponent } from '@vue/composition-api'
-import { mapActions, mapGetters } from 'vuex'
-import { mapState } from 'vuex'
+
 
 export default defineComponent({
+  layout: 'login',
   data() {
     return {
-      email: '',
-      senha: '',
+      login: {
+        username: null,
+        password: null,
+      },
+      btnDisabled: false,
     }
   },
-  name: 'IndexPage',
-  setup() {},
   methods: {
-    async enviarLogin() {
-      const responseToken = await fetch('http://127.0.0.1:8000/api/login/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        credentials: 'include',
-        body: JSON.stringify({
-          email: this.email,
-          password: this.senha,
-        }),
-      })
-      const token = await responseToken.json()
-      console.log(token.jwt)
-      try {
-        const response = await fetch('http://127.0.0.1:8000/api/user/', {
-          headers: { 'Content-Type': 'application/json' },
-          credentials: 'include',
+    registerPage() {
+      this.$router.push('registrar')
+    },
+    resetPage() {
+      this.$router.push('reset')
+    },
+    sendlogin() {
+      console.log('tentando autenticar....')
+
+      this.btnDisabled = true
+      this.$auth
+        .loginWith('local', { data: this.login })
+        .then(() => {
+          console.log('DEU CERTO O LOGIN')
         })
-        const content = await response.json()
-        console.log(content)
-        if (content.detail == 'Deslogado!') {
-          console.log('deu errado')
-        } else {
-          this.$store.commit('STORE_SESSION', content)
-          this.$store.commit('STORE_TOKEN', token.jwt)
-          console.log('deu certo')
-        }
-      } catch (e) {}
-      // this.syncDelay(5000)
-      // this.$router.go("/");
-      this.$router.push({ path: '/' })
+        .catch((erro) => {
+          this.login.username = null
+          this.login.password = null
+          console.log('erro')
+          console.log(erro)
+          this.btnDisabled = false
+        })
     },
   },
-  computed: {
-    ...mapState({
-      user_session: (state) => state.user_session,
-      token: (state) => state.token,
-    }),
+  created() {
+    // this.$auth.$storage.removeUniversal("actualUserStoraged");
   },
 })
 </script>
 <style lang="scss" scoped>
+.login {
+  width: 100%;
+}
 .form .button {
   margin-top: 35px;
 }
-.container .forms{
-
-    align-items: center;
-    height: 440px;
-    width: 100%;
-    transition: height 0.2s ease;
+.container .forms {
+  align-items: center;
+  height: 440px;
+  width: 100%;
+  transition: height 0.2s ease;
 }
 .form .button input {
   border: none;
@@ -202,7 +192,8 @@ export default defineComponent({
 }
 
 .form .input-field {
-  position: relative;
+  display: flex;
+  align-items: center;
   height: 50px;
   width: 100%;
   margin-top: 30px;
@@ -291,7 +282,9 @@ export default defineComponent({
     }
 
     .container .form {
-      width: 50%;
+      width: 100%;
+      align-items: center;
+      display: column;
       padding: 30px;
       background-color: rgb(0, 0, 0);
       transition: margin-left 0.18s ease;
